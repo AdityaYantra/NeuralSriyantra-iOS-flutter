@@ -1,0 +1,47 @@
+name: neural_sriyantra
+description: NeuralSriYantra iOS Flutter app
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  flutter_riverpod: ^2.4.9
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.8.1
+  equatable: ^2.0.5
+  firebase_core: ^2.15.1
+  firebase_auth: ^4.7.3
+  google_sign_in: ^6.1.4
+  sign_in_with_apple: ^4.3.0
+  flutter_blue_plus: ^1.4.5
+  fl_chart: ^0.68.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  flutter_dotenv: ^5.1.0
+  logger: ^1.4.0
+  uuid: ^3.0.7
+
+  # state management
+  hooks_riverpod: ^2.4.9
+
+  # testing
+  mocktail: ^1.0.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.6
+  freezed: ^2.4.1
+  json_serializable: ^6.6.1
+  riverpod_test: ^2.0.6
+
+flutter:
+  uses-material-design: false
+  assets:
+    - assets/
