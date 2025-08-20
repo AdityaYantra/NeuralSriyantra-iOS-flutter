@@ -28,7 +28,12 @@ require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelpe
 flutter_ios_podfile_setup
 
 target 'Runner' do
-  use_frameworks!
+  # Use static linking for all pods to ensure that Flutter headers like
+  # `Flutter/Flutter.h` are available during compilation of plugins such as
+  # `sqflite_darwin`. Dynamic frameworks can lead to missing header search
+  # paths, which triggers build errors on iOS. The static linkage variant keeps
+  # framework support while embedding the code directly in the app.
+  use_frameworks! :linkage => :static
 
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
   target 'RunnerTests' do
