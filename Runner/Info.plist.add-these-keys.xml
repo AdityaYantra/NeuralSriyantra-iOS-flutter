@@ -1,0 +1,7 @@
+<!-- Add inside <dict> in ios/Runner/Info.plist -->
+<key>NSBluetoothAlwaysUsageDescription</key>
+<string>We use Bluetooth to connect to your Muse EEG headband.</string>
+<key>NSBluetoothPeripheralUsageDescription</key>
+<string>Bluetooth access is required to read data from your Muse device.</string>
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>Bluetooth scanning may require location access on some devices.</string>
