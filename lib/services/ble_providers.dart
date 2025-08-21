@@ -1,12 +1,11 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'ble_service.dart';
-import 'mock_ble_service.dart';
+import 'flutter_blue_plus_service.dart';
 import '../data/repositories/ble_repository.dart';
 
 final bleServiceProvider = Provider<BleService>((ref) {
-  // Use mock service for development.
-  return MockBleService();
+  return FlutterBluePlusService();
 });
 
 final bleRepositoryProvider = Provider<BleRepository>((ref) {
